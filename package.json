@@ -1,0 +1,62 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "contracts:build": "hardhat build",
+    "contracts:deploy:mainnet:open-care": "hardhat --build-profile production ignition deploy ignition/modules/PupuOpenCare.ts --network avalancheMainnet --deployment-id PupuOpenCareMainnet2026",
+    "demo:pet-activity:mainnet": "hardhat run scripts/demo-pet-activity.ts --network avalancheMainnet",
+    "count:pet-interactions:mainnet": "hardhat run scripts/count-pet-interactions.ts --network avalancheMainnet",
+    "contracts:typecheck": "tsc --noEmit -p tsconfig.hardhat.json"
+  },
+  "dependencies": {
+    "@privy-io/react-auth": "^3.46.0",
+    "@smoothsend/sdk": "^2.3.8",
+    "@stripe/stripe-js": "^9.17.0",
+    "@tanstack/react-query": "^5.104.0",
+    "git": "^0.1.5",
+    "next": "16.3.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "viem": "^2.57.0",
+    "wagmi": "^3.7.7"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.2.0",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "^3.0.11",
+    "@nomicfoundation/hardhat-ignition": "^3.1.8",
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.1.6",
+    "@nomicfoundation/hardhat-keystore": "^3.1.0",
+    "@nomicfoundation/hardhat-mocha": "^4.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.11",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^4.0.0",
+    "@nomicfoundation/hardhat-typechain": "^3.1.1",
+    "@nomicfoundation/hardhat-verify": "^3.1.1",
+    "@nomicfoundation/ignition-core": "^3.1.9",
+    "@tailwindcss/postcss": "^4",
+    "@types/chai": "^5.2.3",
+    "@types/chai-as-promised": "^8.0.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "chai": "^6.2.2",
+    "dotenv": "^18.0.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.7",
+    "ethers": "^6.14.0",
+    "hardhat": "^3.18.0",
+    "mocha": "^12.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "keccak@3.0.4": true
+  },
+  "type": "module"
+}
